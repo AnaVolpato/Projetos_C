@@ -18,3 +18,5 @@ int main(){
     
     printf("Total:%i\n", total);
 }
+
+// outro comentario
