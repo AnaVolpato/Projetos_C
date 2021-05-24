@@ -11,7 +11,7 @@ int main(){
         printf("Seu nome é: %s", nome);
     }
     else
-        printf("%snao comeca com 'A'\n", nome);
+        printf("%sNão comeca com 'A'\n", nome);
         
 
     return 0;
