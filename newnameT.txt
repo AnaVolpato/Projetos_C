@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+void renameArq (char string1[], char string2[]){
+    int result;
+
+    result = rename(string1, string2);
+
+    if (result == 0)
+        printf("Arquivo renomeado com sucesso!\n");
+    else 
+        printf("Erro ao renomear arquivo: permissao negada.\n");
+
+}
+
+int main(){
+    char oldname[] = "alterarArquivo.c";
+    char newname[] = "newnameT.txt";
+
+    renameArq(oldname, newname);
+
+    return 0;
+
+}

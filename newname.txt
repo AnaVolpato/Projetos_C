@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(){
+    int result;
+    char oldname[] = "alterarArquivo.c";
+    char newname[] = "newname.txt";
+    result = rename(oldname, newname);
+
+    if (result == 0)
+        printf("Arquivo renomeado com sucesso!\n");
+    else 
+        printf("Erro ao renomear arquivo: permissao negada.\n");
+
+    return 0;
+
+}
