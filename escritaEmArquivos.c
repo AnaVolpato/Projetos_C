@@ -14,8 +14,8 @@ int main(){
     int tamanhoString = 0;
     char stringArqAtualizado[100] = {0x00};
 
-    // memset(stringArq, 0, sizeof(stringArq));
-    // memset(stringArqAtualizado, 0, sizeof(stringArqAtualizado));
+    memset(stringArq, 0, sizeof(stringArq));
+    memset(stringArqAtualizado, 0, sizeof(stringArqAtualizado));
 
     //solicitando o nome do arquivo
     printf("Digite o nome do arquivo que sera inserida a string: ");
@@ -32,7 +32,10 @@ int main(){
     // printf("nome: [%s]", nomeArqAtualizado);
 
     //abrindo arquivo para gravação
-    pont_arq = fopen(nomeArqAtualizado, "r+");
+    //a == acessar e acresentar string
+    //r+ == acessar arquivo e alterar a string que ja existe 
+    //w == criar arquivo || alterar os dados do arquivo ja existente
+    pont_arq = fopen(nomeArqAtualizado, "w");
     //verificando existencia do arquivo
     if(pont_arq == NULL){
         printf("ERRO: arquivo não encontrado!\n");
