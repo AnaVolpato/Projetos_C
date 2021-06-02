@@ -52,118 +52,112 @@ void bina(int num){
 
 }
 
-int main(){
-    char bitmap[50] = "2238000000410008";
-    char bitmapHex[3];
-    int tam = 0;
-    int tamDois = 0;
-    int tamanhoTotal = 0;
-    int i = -2;
-    int j = -1;
-    int l = 0;
-    char numBitmap[2] = {0x00};
-    int bitmapInt;
-    char posi[2];
-    int numeroInt;
-    int bin[5];
-    int aux;
-    char zAux[128] = {0x00};
-    int k = 0;
-    int tamanhoBinario = 0;
-    int posit;
-    char a;
+// int main(){
+//     char bitmap[50] = "2238000000410008";
+//     char bitmapHex[3];
+//     int tam = 0;
+//     int tamDois = 0;
+//     int tamanhoTotal = 0;
+//     int i = -2;
+//     int j = -1;
+//     int l = 0;
+//     char numBitmap[2] = {0x00};
+//     int bitmapInt;
+//     char posi[2];
+//     int numeroInt;
+//     int bin[5];
+//     int aux;
+//     char zAux[128] = {0x00};
+//     int k = 0;
+//     int tamanhoBinario = 0;
+//     int posit;
+//     char a;
 
-    tamanhoTotal = strlen(bitmap);
+//     tamanhoTotal = strlen(bitmap);
 
-    printf("\nBITMAP: %s\n", bitmap);
-    printf("BITMAP HEX: ");
-    printf("%s ", bitmapHex);
+//     printf("\nBITMAP: %s\n", bitmap);
+//     printf("BITMAP HEX: ");
+//     printf("%s ", bitmapHex);
 
-    while (tam < (tamanhoTotal/2)){
+//     while (tam < (tamanhoTotal/2)){
 
-        strncpy(bitmapHex, bitmap + (i+=2), 2);
-        printf("%s ", bitmapHex);
+//         strncpy(bitmapHex, bitmap + (i+=2), 2);
+//         printf("%s ", bitmapHex);
 
-        tam ++;}
+//         tam ++;}
     
-    printf("\n");
+//     printf("\n");
 
-    printf("BITMAP BIN: ");
+//     printf("BITMAP BIN: ");
 
 
-    while(tamDois < tamanhoTotal){
-        numeroInt = bitmap[j+=1] - '0';
-        bina(numeroInt);
+//     while(tamDois < tamanhoTotal){
+//         numeroInt = bitmap[j+=1] - '0';
+//         bina(numeroInt);
 
-        // switch (a = bitmap[j+=1])
-        // {
-        // case 0:
-        //     printf("%c", a);
-        //     break;
-        // case 1:
-        //     printf("%c", a);
-        //     break;
-        // case 2:
-        //     printf("%c", a);
-        //     break;
-        // case 3:
-        //     printf("%c", a);
-        //     break;
-        // case 4:
-        //     printf("%c", a);
-        //     break;
-        // case 5:
-        //     printf("%c", a);
-        //     break;
-        // case 6:
-        //     printf("%c", a);
-        //     break;
-        // case 7:
-        //     printf("%c", a);
-        //     break;
-        // case 8:
-        //     printf("%c", a);
-        //     break;
-        // case 9:
-        //     printf("%c", a);
-        //     break;
+//         // switch (a = bitmap[j+=1])
+//         // {
+//         // case 0:
+//         //     printf("%c", a);
+//         //     break;
+//         // case 1:
+//         //     printf("%c", a);
+//         //     break;
+//         // case 2:
+//         //     printf("%c", a);
+//         //     break;
+//         // case 3:
+//         //     printf("%c", a);
+//         //     break;
+//         // case 4:
+//         //     printf("%c", a);
+//         //     break;
+//         // case 5:
+//         //     printf("%c", a);
+//         //     break;
+//         // case 6:
+//         //     printf("%c", a);
+//         //     break;
+//         // case 7:
+//         //     printf("%c", a);
+//         //     break;
+//         // case 8:
+//         //     printf("%c", a);
+//         //     break;
+//         // case 9:
+//         //     printf("%c", a);
+//         //     break;
         
-        // default:
-        //     break;
-        // }
+//         // default:
+//         //     break;
+//         // }
 
 
-            zAux[k] = numeroInt + 48;
+//             zAux[k] = numeroInt + 48;
         
-        tamDois++;
-    }
-return 0;
-    printf("%s\n", zAux);
+//         tamDois++;
+//     }
+// return 0;
+//     printf("%s\n", zAux);
 
-    tamanhoBinario = strlen(zAux);
+//     tamanhoBinario = strlen(zAux);
 
-    printf("DADOS PRESENTES: ");
+//     printf("DADOS PRESENTES: ");
 
-    k = -1;
-    while (l < tamanhoBinario){
-        if (zAux[k+=1] == '1' )
-            printf("%d ", (k + 1));
-        l++;
-    }
+//     k = -1;
+//     while (l < tamanhoBinario){
+//         if (zAux[k+=1] == '1' )
+//             printf("%d ", (k + 1));
+//         l++;
+//     }
 
-    printf("\n");
-}
+//     printf("\n");
+// }
 
 
-
-------------------------
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
 int main(){
-    char bitmap[50] = "B238060000C0920A2400000000000508";
+    char bitmap[50] = {0x00};
     char bitmapHex[3];
     int tam = 0;
     int tamDois = 0;
@@ -182,8 +176,8 @@ int main(){
     int tamanhoBinario = 0;
     int posit;
 
-    // printf("Digite o bitmap: \n");
-    // fgets(bitmap, 50, stdin);
+    printf("Digite o bitmap: \n");
+    fgets(bitmap, 50, stdin);
 
     tamanhoTotal = strlen(bitmap);
 
